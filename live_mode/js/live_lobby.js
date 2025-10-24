@@ -15,7 +15,7 @@ const signOutBtn = document.getElementById('signOut');
 let me = null;
 
 onAuthStateChanged(auth, async (user) => {
-  if (!user) return window.location.href = '/rivalis_login.html';
+  if (!user) return window.location.href = 'https://rivalishub.netlify.app';
   me = user;
   userTag.textContent = user.displayName || user.email || user.uid.slice(0,6);
   loadRooms();
@@ -65,5 +65,5 @@ joinCodeBtn.addEventListener('click', ()=>{
 
 signOutBtn.addEventListener('click', async ()=>{
   await auth.signOut();
-  window.location.href = '/rivalis_login.html';
+  window.location.href = 'https://rivalishub.netlify.app';
 });

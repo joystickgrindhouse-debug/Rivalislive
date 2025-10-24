@@ -41,3 +41,5 @@ Frontend web application (static files served via Node.js HTTP server)
 - The application is entirely client-side with Firebase backend
 - No build process required (uses CDN imports for libraries)
 - Server only serves static files with proper MIME types
+- Integrates with main Rivalis Hub at https://rivalishub.netlify.app for authentication
+- Background image is exercise-themed and generated for the application

@@ -32,7 +32,7 @@ function getQuery(name){
 }
 
 onAuthStateChanged(auth, async (user)=>{
-  if(!user) return window.location.href = '/rivalis_login.html';
+  if(!user) return window.location.href = 'https://rivalishub.netlify.app';
   me = user;
   init();
 });

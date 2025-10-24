@@ -32,6 +32,8 @@ live_mode/
 
 This application uses Firebase for backend services. The Firebase configuration is pre-configured in `live_mode/js/firebase.js`.
 
+**Authentication:** This Live Arena module integrates with the main Rivalis Hub at `https://rivalishub.netlify.app` for user authentication and login.
+
 ## Running Locally
 
 The application is served via a simple Node.js HTTP server on port 5000.
