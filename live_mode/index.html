@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rivalis — Live Lobby</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="app-bg"></div>
+
+  <header class="topbar">
+    <div class="left">
+      <button id="menuBtn" class="menu-btn">☰</button>
+      <a href="/hub/index.html" class="hub-btn">Training Hub</a>
+    </div>
+    <div class="right">
+      <span id="userTag" class="user-tag">...</span>
+      <button id="signOut" class="btn small">Sign out</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel lobby-panel">
+      <h1>Live Arena Lobby</h1>
+      <div class="lobby-controls">
+        <input id="roomName" placeholder="Room name (optional)" />
+        <button id="createRoom" class="btn">Create Room</button>
+      </div>
+
+      <div id="roomsList" class="rooms-list">
+        <h3>Open Rooms</h3>
+        <div id="roomsContainer"></div>
+      </div>
+
+      <div class="join-by-code">
+        <input id="roomCode" placeholder="Join by code" />
+        <button id="joinCodeBtn" class="btn">Join</button>
+      </div>
+
+      <div class="help">Note: Live chat is available inside rooms. Avatars move based on pose data (MediaPipe).</div>
+    </section>
+  </main>
+
+  <template id="roomItemTpl">
+    <div class="room-item">
+      <div class="room-meta">
+        <div class="room-name"></div>
+        <div class="room-host"></div>
+      </div>
+      <div class="room-actions">
+        <button class="btn join-btn">Join</button>
+      </div>
+    </div>
+  </template>
+
+  <script type="module" src="./js/firebase.js"></script>
+  <script type="module" src="./js/live_lobby.js"></script>
+</body>
+</html>

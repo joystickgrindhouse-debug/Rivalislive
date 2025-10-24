@@ -1,0 +1,56 @@
+/* Rivalis Live Mode style (dark red neon) */
+
+:root{
+  --bg:#070507;
+  --card:#0b0b0b;
+  --neon-red:#ff2e2e;
+  --neon-green:#00ff88;
+  --muted:#888;
+  --glass: rgba(255,255,255,0.03);
+  --font: "Player 2", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;padding:0;font-family:var(--font);background:var(--bg);color:#fff}
+
+.app-bg{position:fixed;inset:0;background: url('../assets/dashboard-bg.png') center/cover no-repeat fixed;filter:brightness(.5);z-index:0}
+
+.topbar{position:fixed;top:0;left:0;right:0;height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15));z-index:50;border-bottom:1px solid rgba(255,46,46,0.04)}
+.topbar .left, .topbar .right{display:flex;align-items:center;gap:12px}
+.hub-btn{color:var(--neon-red);font-weight:800;text-decoration:none;padding:8px 12px;border-radius:8px}
+.menu-btn{background:transparent;color:#fff;border:none;font-size:20px;cursor:pointer}
+.user-tag{font-size:14px;color:var(--muted)}
+.btn{background:var(--neon-red);color:#000;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:700}
+.btn.small{padding:6px 10px;font-size:13px;border-radius:6px}
+.container{padding-top:96px;display:flex;justify-content:center;align-items:flex-start;gap:20px;min-height:calc(100vh - 96px);z-index:10}
+.panel{background:rgba(10,10,10,0.5);border-radius:12px;padding:18px;width:360px;border:1px solid rgba(255,46,46,0.06);box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+.lobby-panel h1{margin:0 0 10px 0;color:var(--neon-red)}
+.lobby-controls{display:flex;gap:8px;margin-bottom:12px}
+.lobby-controls input{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,46,46,0.06);background:transparent;color:#fff}
+.rooms-list{margin-top:12px}
+.room-item{display:flex;justify-content:space-between;align-items:center;padding:10px;border-top:1px dashed rgba(255,255,255,0.02)}
+.room-meta .room-name{font-weight:800;color:#fff}
+.room-meta .room-host{font-size:13px;color:var(--muted)}
+
+.arena-container{display:flex;gap:18px;padding:88px 20px 20px 20px}
+.stage{flex:1;position:relative;min-height:520px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,46,46,0.04);background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.3))}
+#stageCanvas{width:100%;height:100%;display:block}
+.chat-panel{width:360px;background:rgba(0,0,0,0.55);border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:8px}
+.chat-feed{flex:1;overflow:auto;padding:8px;background:rgba(0,0,0,0.15);border-radius:6px}
+.chat-controls{display:flex;gap:8px}
+.chat-controls input{flex:1;padding:8px;border-radius:8px;border:1px solid rgba(255,46,46,0.06);background:transparent;color:#fff}
+.controls-bottom{position:fixed;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:20px;z-index:60}
+.mode-toggle{background:rgba(0,0,0,0.5);padding:10px;border-radius:10px;display:flex;gap:12px;align-items:center}
+.session-stats{background:rgba(0,0,0,0.45);padding:10px;border-radius:10px;display:flex;gap:8px;align-items:center}
+
+.chat-message{padding:6px 8px;border-radius:8px;margin-bottom:6px;background:rgba(255,255,255,0.02)}
+.chat-message .meta{font-size:12px;color:var(--muted);margin-bottom:4px}
+
+.ready-indicator{padding:6px 8px;border-radius:8px;background:rgba(255,46,46,0.06);color:var(--neon-red);font-weight:800}
+
+.avatar-sprite{position:absolute;transform-origin:center center;pointer-events:none}
+
+@media (max-width:900px){
+  .arena-container{flex-direction:column;padding:120px 10px 120px}
+  .chat-panel{width:100%}
+}

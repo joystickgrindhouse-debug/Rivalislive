@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rivalis — Live Arena</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="app-bg"></div>
+
+  <header class="topbar">
+    <div class="left">
+      <button id="menuBtn" class="menu-btn">☰</button>
+      <a href="/hub/index.html" class="hub-btn">Training Hub</a>
+    </div>
+    <div class="center">
+      <div id="roomTitle">Room</div>
+    </div>
+    <div class="right">
+      <span id="readyIndicator" class="ready-indicator">Not Ready</span>
+      <button id="leaveBtn" class="btn small">Leave</button>
+    </div>
+  </header>
+
+  <main class="arena-container">
+    <section class="stage">
+      <canvas id="stageCanvas"></canvas>
+      <video id="localVideo" autoplay muted playsinline style="display:none;"></video>
+    </section>
+
+    <aside class="chat-panel">
+      <div class="chat-header">
+        <h3>Live Chat</h3>
+        <button id="muteChat" class="btn small">Mute</button>
+      </div>
+      <div id="chatFeed" class="chat-feed"></div>
+      <div class="chat-controls">
+        <input id="chatInput" placeholder="Type a message..." />
+        <button id="chatSend" class="btn">Send</button>
+      </div>
+    </aside>
+  </main>
+
+  <div class="controls-bottom">
+    <div class="mode-toggle">
+      <label><input type="radio" name="mode" value="avatar" checked> Avatar Mirror</label>
+      <label><input type="radio" name="mode" value="camera"> Camera Feed</label>
+      <label><input type="checkbox" id="showOwnSkeleton"> Show my skeleton (local)</label>
+    </div>
+    <div class="session-stats">
+      <span id="playersCount">Players: 1</span>
+      <button id="readyBtn" class="btn">Ready</button>
+    </div>
+  </div>
+
+  <script type="module" src="./js/firebase.js"></script>
+  <script type="module" src="./js/poseHandler.js"></script>
+  <script type="module" src="./js/realtimeSync.js"></script>
+  <script type="module" src="./js/avatarRenderer.js"></script>
+  <script type="module" src="./js/arena_main.js"></script>
+</body>
+</html>

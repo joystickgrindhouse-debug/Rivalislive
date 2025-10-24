@@ -1,0 +1,12 @@
+{
+  "name": "rivalis-live",
+  "version": "1.0.0",
+  "description": "Rivalis Live - Real-time multiplayer fitness arena with pose detection",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["fitness", "multiplayer", "mediapipe", "firebase"],
+  "author": "",
+  "license": "MIT"
+}
